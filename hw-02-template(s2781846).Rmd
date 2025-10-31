@@ -96,7 +96,7 @@ mutate(
 translate_data$total_distance<-translate_data$total_distance/1000 #change it to km
 #view(consolidated_data)
 class(translate_data)
-filter
+#filter
 data_13_7 <- translate_data %>%
   mutate(
     type = case_when(

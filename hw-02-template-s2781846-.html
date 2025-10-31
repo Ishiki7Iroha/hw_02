@@ -11,7 +11,7 @@
 
 <meta name="author" content="Jason Zeng(s2781846)" />
 
-<meta name="date" content="2025-10-31" />
+<meta name="date" content="2025-11-01" />
 
 <title>hw-02(s2781846)</title>
 
@@ -352,7 +352,7 @@ display: none;
 
 <h1 class="title toc-ignore">hw-02(s2781846)</h1>
 <h4 class="author">Jason Zeng(s2781846)</h4>
-<h4 class="date">2025-10-31</h4>
+<h4 class="date">2025-11-01</h4>
 
 </div>
 
@@ -441,19 +441,8 @@ translate_data$total_distance&lt;-translate_data$total_distance/1000 #change it 
 #view(consolidated_data)
 class(translate_data)</code></pre>
 <pre><code>## [1] &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</code></pre>
-<pre class="r"><code>filter</code></pre>
-<pre><code>## function (.data, ..., .by = NULL, .preserve = FALSE) 
-## {
-##     check_by_typo(...)
-##     by &lt;- enquo(.by)
-##     if (!quo_is_null(by) &amp;&amp; !is_false(.preserve)) {
-##         abort(&quot;Can&#39;t supply both `.by` and `.preserve`.&quot;)
-##     }
-##     UseMethod(&quot;filter&quot;)
-## }
-## &lt;bytecode: 0x00000179f3a8c6d0&gt;
-## &lt;environment: namespace:dplyr&gt;</code></pre>
-<pre class="r"><code>data_13_7 &lt;- translate_data %&gt;%
+<pre class="r"><code>#filter
+data_13_7 &lt;- translate_data %&gt;%
   mutate(
     type = case_when(
       total_distance &lt; 7  ~ &quot;long_distance_runner&quot;,
