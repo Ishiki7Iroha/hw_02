@@ -129,18 +129,18 @@ ggplot(data = data_13_7,
 
 ```{r ex4_good_viz, echo = FALSE, out.width = "80%"}
  #edit the file path accordingly
-#knitr::include_graphics("img/good_viz.png")
+knitr::include_graphics("good_visulization.png")
 ```
 
 _Edit the text below by replacing the bold text with the appropriate information to provide a reference for your image (Please delete this message before submission!)_
 
-**Author/Organisation**, "**Title of website**" [Online]. Available at: **URL** (Accessed: **day month year**)
+**Don't know**, "**https://chartexpo.com/blog/?p=27756**" [Online]. Available at: **URL** (Accessed: **day month year**)
 
 
 The above image presents a good data visualisation because:
 
--   _Reason 1_
--   _Reason 2_
+-   The x-axis and y-axis are labled easily to read
+-   The trend is shown clearly on the graph
 
 
 #### Example of a bad data visualisation
@@ -148,18 +148,18 @@ The above image presents a good data visualisation because:
 
 ```{r ex4_bad_viz, echo = FALSE, out.width = "80%"}
 # edit the file path accordingly
-#knitr::include_graphics("img/bad_viz.png")
+knitr::include_graphics("909.png")
 ```
 
 _Edit the text below by replacing the bold text with the appropriate information to provide a reference for your image (Please delete this message before submission!)_
 
-**Author/Organisation**, "**Title of website**" [Online]. Available at: **URL** (Accessed: **day month year**)
+**fredwhipp.wordpress**, "**https://fredwhipp.wordpress.com/2020/10/24/example-post-2/**" [Online]. Available at: **https://fredwhipp.wordpress.com/2020/10/24/example-post-2/** (Accessed: **day month year**)
 
 
 
 The above image presents a bad data visualisation because:
 
--   _Reason 1_
--   _Reason 2_
+-   Too many data makes it impossible to read
+-   Needs to be more colorful for people to distinguish different box.
 
 
