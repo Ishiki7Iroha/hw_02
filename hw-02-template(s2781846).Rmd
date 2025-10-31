@@ -1,5 +1,5 @@
 ---
-title: "hw-02"
+title: "hw-02(s2781846)"
 author: "Jason Zeng(s2781846)"
 date: "`r Sys.Date()`"
 output: html_document
@@ -38,35 +38,39 @@ data_5k_10k %>%
   geom_histogram(bins = 20)
 ```
 
-
-_Write your text to answer exercise 1a here (Please delete this message before submission!)_
-
-
+  The histogram is in a shape of normal distribution. Most male runners'average heart rate is around 150 bpm. Also, It is very rare for people who have lower than 125bpm and higher than 175 bpm. There is a small peak around 125 bpm. 
 ```{r ex1b, out.width="80%"}
 # Write your code for Ex1b here
-
-
-
-
+data_5k_10k %>% 
+  filter(gender == "F") %>%
+  filter(!is.na(average.heart.rate..bpm.)) %>%
+  ggplot(aes(x = average.heart.rate..bpm.)) + 
+  geom_histogram(bins = 20)
 
 ```
 
 
 _Write your text to answer exercise 1b here (Please delete this message before submission!)_
 
-
+Compare it to the first histogram, the histogram of female runner is kind of biased to the right. This means more female runners are having a higher average heart rate. And also, the second histogram is more discrete. There are two peaks, one is at around 150 and another one is around 170.
 ## Exercise 2
 
 ```{r ex2, out.width = "80%"}
 # Write your code to answer exercise 2a here
-
-
-
+  data_5k_10k$pace<-(data_5k_10k$elapsed.time..s.*1000)/(data_5k_10k$distance..m.*60)
+  data_5k_10k %>% filter(!is.na(gender))  #don't know why it doesn't work
+  ggplot(data_5k_10k, aes(x = pace, y = event, fill = gender)) +
+  geom_boxplot(na.rm = TRUE) +
+  labs(title = "pace (in minutes per km) achieved in 5K and 10K runs, distinguished by gender",
+       y = "5k or 10k",
+       x = "pace minutes/km") +
+  scale_fill_manual(values = c("lightblue", "lightpink")) +
+  theme_minimal()
 
 ```
 
 _Write your text to answer exercise 2b here (Please delete this message before submission!)_
-
+On average, male runners need less time to run a kilometers compare to female runners. This has be shwon on both 5k and 10k samples.
 
 
 
@@ -74,7 +78,15 @@ _Write your text to answer exercise 2b here (Please delete this message before s
 
 ```{r ex3, out.width = "80%"}
 # Write your code to answer exercise 3 here
-
+data_5k_10k%>%
+  mutate(
+    runner_type = case_when(
+      distance..m. > 4998 & distance..m. < 5015  ~ "5k",
+      distance..m. > 9998 & distance..m. < 10015 ~ "10k",
+      TRUE ~ NA_character_
+    )
+  ) %>%
+  filter(!is.na(event))
 
 
 
@@ -91,7 +103,7 @@ _Write your text to answer exercise 2b here (Please delete this message before s
 
 ```{r ex4_good_viz, echo = FALSE, out.width = "80%"}
 # edit the file path accordingly
-knitr::include_graphics("img/good_viz.png")
+#knitr::include_graphics("img/good_viz.png")
 ```
 
 _Edit the text below by replacing the bold text with the appropriate information to provide a reference for your image (Please delete this message before submission!)_
