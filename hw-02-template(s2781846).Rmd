@@ -1,6 +1,6 @@
 ---
 title: "hw-02"
-author: "Your Name (S000000)"
+author: "Jason Zeng(s2781846)"
 date: "`r Sys.Date()`"
 output: html_document
 ---
@@ -110,7 +110,7 @@ The above image presents a good data visualisation because:
 
 ```{r ex4_bad_viz, echo = FALSE, out.width = "80%"}
 # edit the file path accordingly
-knitr::include_graphics("img/bad_viz.png")
+#knitr::include_graphics("img/bad_viz.png")
 ```
 
 _Edit the text below by replacing the bold text with the appropriate information to provide a reference for your image (Please delete this message before submission!)_
